@@ -105,7 +105,10 @@ def marks():
         else:
             based = based + int(cgl[i])*4
     
-    finalcg = round(based/credit_sum,2)
+    try:
+        finalcg = round(based/credit_sum,2)
+    except ZeroDivisionError:
+        finalcg = 0
     
     return render_template('output.html', data=subject_values, specific_data=finalcg)
 

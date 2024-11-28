@@ -24,8 +24,10 @@ def marks():
                 cgl.append(8)
             elif value == "B":
                 cgl.append(7)
-            else:
+            elif value == "C":
                 cgl.append(6)
+            else:
+                cgl.append(0)
             credit_sum += 7
             subject_values["Data Structures using C++"] = value
         elif subject == "ims":
@@ -38,8 +40,10 @@ def marks():
                 cgl.append(8)
             elif value == "B":
                 cgl.append(7)
-            else:
+            elif value == "C":
                 cgl.append(6)
+            else:
+                cgl.append(0)
             credit_sum += 4
             subject_values["Information Management Systems"] = value
         elif subject == "spec":
@@ -52,8 +56,10 @@ def marks():
                 cgl.append(8)
             elif value == "B":
                 cgl.append(7)
-            else:
+            elif value == "C":
                 cgl.append(6)
+            else:
+                cgl.append(0)
             credit_sum += 4
             subject_values["Specialization"] = value
         elif subject == "prob":
@@ -66,8 +72,10 @@ def marks():
                 cgl.append(8)
             elif value == "B":
                 cgl.append(7)
-            else:
+            elif value == "C":
                 cgl.append(6)
+            else:
+                cgl.append(0)
             credit_sum += 4
             subject_values["Probability and Statistics"] = value
         elif subject == "swe":
@@ -80,8 +88,10 @@ def marks():
                 cgl.append(8)
             elif value == "B":
                 cgl.append(7)
-            else:
+            elif value == "C":
                 cgl.append(6)
+            else:
+                cgl.append(0)
             credit_sum += 4
             subject_values["Software Engineering"] = value
         else:

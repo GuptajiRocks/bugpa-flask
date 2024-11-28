@@ -12,31 +12,37 @@ def marks():
     selected_subjects = request.form.getlist('subjects') 
     subject_values = {}
     cgl = []
+    credit_sum = 0
     for subject in selected_subjects:
         if subject == "cpp":
             value = request.form.get(f"{subject}_value")
             cgl.append(value)
+            credit_sum += 7
             subject_values["Data Structures using C++"] = value
         elif subject == "ims":
             value = request.form.get(f"{subject}_value")
             cgl.append(value)
+            credit_sum += 4
             subject_values["Information Management Systems"] = value
         elif subject == "spec":
             value = request.form.get(f"{subject}_value")
             cgl.append(value)
+            credit_sum += 4
             subject_values["Specialization"] = value
         elif subject == "prob":
             value = request.form.get(f"{subject}_value")
             cgl.append(value)
+            credit_sum += 4
             subject_values["Probability and Statistics"] = value
         elif subject == "swe":
             value = request.form.get(f"{subject}_value")
             cgl.append(value)
+            credit_sum += 4
             subject_values["Software Engineering"] = value
         else:
             pass
     
-    credit_sum = 23
+    
     based = 0
     for i in range(len(cgl)):
         if i == 0:

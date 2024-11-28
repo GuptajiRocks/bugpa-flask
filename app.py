@@ -16,27 +16,72 @@ def marks():
     for subject in selected_subjects:
         if subject == "cpp":
             value = request.form.get(f"{subject}_value")
-            cgl.append(value)
+            if value == "A+":
+                cgl.append(10)
+            elif value == "A":
+                cgl.append(9)
+            elif value == "B+":
+                cgl.append(8)
+            elif value == "B":
+                cgl.append(7)
+            else:
+                cgl.append(6)
             credit_sum += 7
             subject_values["Data Structures using C++"] = value
         elif subject == "ims":
             value = request.form.get(f"{subject}_value")
-            cgl.append(value)
+            if value == "A+":
+                cgl.append(10)
+            elif value == "A":
+                cgl.append(9)
+            elif value == "B+":
+                cgl.append(8)
+            elif value == "B":
+                cgl.append(7)
+            else:
+                cgl.append(6)
             credit_sum += 4
             subject_values["Information Management Systems"] = value
         elif subject == "spec":
             value = request.form.get(f"{subject}_value")
-            cgl.append(value)
+            if value == "A+":
+                cgl.append(10)
+            elif value == "A":
+                cgl.append(9)
+            elif value == "B+":
+                cgl.append(8)
+            elif value == "B":
+                cgl.append(7)
+            else:
+                cgl.append(6)
             credit_sum += 4
             subject_values["Specialization"] = value
         elif subject == "prob":
             value = request.form.get(f"{subject}_value")
-            cgl.append(value)
+            if value == "A+":
+                cgl.append(10)
+            elif value == "A":
+                cgl.append(9)
+            elif value == "B+":
+                cgl.append(8)
+            elif value == "B":
+                cgl.append(7)
+            else:
+                cgl.append(6)
             credit_sum += 4
             subject_values["Probability and Statistics"] = value
         elif subject == "swe":
             value = request.form.get(f"{subject}_value")
-            cgl.append(value)
+            if value == "A+":
+                cgl.append(10)
+            elif value == "A":
+                cgl.append(9)
+            elif value == "B+":
+                cgl.append(8)
+            elif value == "B":
+                cgl.append(7)
+            else:
+                cgl.append(6)
             credit_sum += 4
             subject_values["Software Engineering"] = value
         else:

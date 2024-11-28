@@ -9,81 +9,101 @@
 <body class="bg-gradient-to-br from-blue-100 via-purple-100 to-pink-100 min-h-screen flex items-center justify-center">
   <div class="max-w-2xl w-full bg-white shadow-2xl rounded-lg p-8 border border-gray-200">
     <h1 class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 text-center mb-6">
-      CGPA Calculator : Enter the point between 1-10
+      CGPA Calculator : Select your grades
     </h1>
     <form action="/marks" method="POST" class="space-y-8">
-     
-        <fieldset>
+      <fieldset>
         <legend class="text-xl font-semibold text-gray-800">Select Your Subjects</legend>
         <div class="mt-6 space-y-6">
-          <!-- Mathematics -->
+          <!-- Data Structures using C++ -->
           <div class="flex items-center justify-between bg-gradient-to-r from-blue-50 to-purple-50 p-4 rounded-lg shadow">
             <label class="flex items-center">
               <input type="checkbox" name="subjects" value="cpp" class="form-checkbox h-6 w-6 text-blue-500 focus:ring focus:ring-blue-300 subject-checkbox">
               <span class="ml-3 text-gray-800 font-medium">Data Structures using C++</span>
             </label>
-            <input 
-              type="number" 
+            <select 
               name="cpp_value" 
-              placeholder="Enter value" 
-              class="form-input w-28 p-2 border border-gray-300 rounded-md focus:ring-purple-500 focus:border-purple-500 disabled:opacity-50 disabled:cursor-not-allowed"
-              disabled
-            >
+              class="form-select w-28 p-2 border border-gray-300 rounded-md focus:ring-purple-500 focus:border-purple-500 disabled:opacity-50 disabled:cursor-not-allowed" 
+              disabled>
+              <option value="">Select</option>
+              <option value="A+">A+</option>
+              <option value="A">A</option>
+              <option value="B+">B+</option>
+              <option value="B">B</option>
+              <option value="C">c</option>
+            </select>
           </div>
-          <!-- Science -->
+          <!-- Information Management System -->
           <div class="flex items-center justify-between bg-gradient-to-r from-green-50 to-teal-50 p-4 rounded-lg shadow">
             <label class="flex items-center">
               <input type="checkbox" name="subjects" value="ims" class="form-checkbox h-6 w-6 text-green-500 focus:ring focus:ring-green-300 subject-checkbox">
               <span class="ml-3 text-gray-800 font-medium">Information Management System</span>
             </label>
-            <input 
-              type="number" 
+            <select 
               name="ims_value" 
-              placeholder="Enter value" 
-              class="form-input w-28 p-2 border border-gray-300 rounded-md focus:ring-teal-500 focus:border-teal-500 disabled:opacity-50 disabled:cursor-not-allowed"
-              disabled
-            >
+              class="form-select w-28 p-2 border border-gray-300 rounded-md focus:ring-teal-500 focus:border-teal-500 disabled:opacity-50 disabled:cursor-not-allowed" 
+              disabled>
+              <option value="">Select</option>
+              <option value="A+">A+</option>
+              <option value="A">A</option>
+              <option value="B+">B+</option>
+              <option value="B">B</option>
+              <option value="C">c</option>
+            </select>
           </div>
-          <!-- History -->
+          <!-- Specialization -->
           <div class="flex items-center justify-between bg-gradient-to-r from-yellow-50 to-orange-50 p-4 rounded-lg shadow">
             <label class="flex items-center">
               <input type="checkbox" name="subjects" value="spec" class="form-checkbox h-6 w-6 text-yellow-500 focus:ring focus:ring-yellow-300 subject-checkbox">
               <span class="ml-3 text-gray-800 font-medium">Specialization</span>
             </label>
-            <input 
-              type="number" 
+            <select 
               name="spec_value" 
-              placeholder="Enter value" 
-              class="form-input w-28 p-2 border border-gray-300 rounded-md focus:ring-orange-500 focus:border-orange-500 disabled:opacity-50 disabled:cursor-not-allowed"
-              disabled
-            >
+              class="form-select w-28 p-2 border border-gray-300 rounded-md focus:ring-orange-500 focus:border-orange-500 disabled:opacity-50 disabled:cursor-not-allowed" 
+              disabled>
+              <option value="">Select</option>
+              <option value="A+">A+</option>
+              <option value="A">A</option>
+              <option value="B+">B+</option>
+              <option value="B">B</option>
+              <option value="C">c</option>
+            </select>
           </div>
-          <!-- Art -->
+          <!-- Probability and Statistics -->
           <div class="flex items-center justify-between bg-gradient-to-r from-pink-50 to-red-50 p-4 rounded-lg shadow">
             <label class="flex items-center">
               <input type="checkbox" name="subjects" value="prob" class="form-checkbox h-6 w-6 text-pink-500 focus:ring focus:ring-pink-300 subject-checkbox">
-              <span class="ml-3 text-gray-800 font-medium">Probability and Statstics</span>
+              <span class="ml-3 text-gray-800 font-medium">Probability and Statistics</span>
             </label>
-            <input 
-              type="number" 
+            <select 
               name="prob_value" 
-              placeholder="Enter value" 
-              class="form-input w-28 p-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500 disabled:opacity-50 disabled:cursor-not-allowed"
-              disabled
-            >
+              class="form-select w-28 p-2 border border-gray-300 rounded-md focus:ring-red-500 focus:border-red-500 disabled:opacity-50 disabled:cursor-not-allowed" 
+              disabled>
+              <option value="">Select</option>
+              <option value="A+">A+</option>
+              <option value="A">A</option>
+              <option value="B+">B+</option>
+              <option value="B">B</option>
+              <option value="C">c</option>
+            </select>
           </div>
+          <!-- Software Engineering -->
           <div class="flex items-center justify-between bg-gradient-to-r from-yellow-50 to-orange-50 p-4 rounded-lg shadow">
             <label class="flex items-center">
               <input type="checkbox" name="subjects" value="swe" class="form-checkbox h-6 w-6 text-yellow-500 focus:ring focus:ring-yellow-300 subject-checkbox">
               <span class="ml-3 text-gray-800 font-medium">Software Engineering</span>
             </label>
-            <input 
-              type="number" 
+            <select 
               name="swe_value" 
-              placeholder="Enter value" 
-              class="form-input w-28 p-2 border border-gray-300 rounded-md focus:ring-orange-500 focus:border-orange-500 disabled:opacity-50 disabled:cursor-not-allowed"
-              disabled
-            >
+              class="form-select w-28 p-2 border border-gray-300 rounded-md focus:ring-orange-500 focus:border-orange-500 disabled:opacity-50 disabled:cursor-not-allowed" 
+              disabled>
+              <option value="">Select</option>
+              <option value="A+">A+</option>
+              <option value="A">A</option>
+              <option value="B+">B+</option>
+              <option value="B">B</option>
+              <option value="C">c</option>
+            </select>
           </div>
         </div>
       </fieldset>
@@ -99,10 +119,10 @@
   <script>
     document.querySelectorAll('.subject-checkbox').forEach(checkbox => {
       checkbox.addEventListener('change', function () {
-        const inputField = this.closest('div').querySelector('input[type="number"]');
-        inputField.disabled = !this.checked;
+        const dropdown = this.closest('div').querySelector('select');
+        dropdown.disabled = !this.checked;
         if (!this.checked) {
-          inputField.value = '';
+          dropdown.value = '';
         }
       });
     });

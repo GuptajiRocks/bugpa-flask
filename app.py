@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route("/")
 @app.route("/index")
 def main_page():
-    return render_template("index.html")
+    return render_template("main.html")
 
 @app.route('/marks', methods=['POST', 'GET'])
 def marks():
@@ -118,6 +118,10 @@ def marks():
 def get_mac_add():
     add = gt.get_mac_address()
     return render_template("final.html", mac_add = add)
+
+@app.route("/pgone")
+def sgpa():
+    return render_template("index.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

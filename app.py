@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify, render_template
+import getmac as gt
 
 app = Flask(__name__)
 
@@ -111,6 +112,12 @@ def marks():
         finalcg = 0
     
     return render_template('output.html', data=subject_values, specific_data=finalcg)
+
+
+@app.route("/getmac")
+def get_mac_add():
+    add = gt.get_mac_address()
+    return render_template("final.html", mac_add = add)
 
 if __name__ == "__main__":
     app.run(debug=True)

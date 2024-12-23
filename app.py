@@ -107,7 +107,7 @@ def marks():
             based = based + int(cgl[i])*4
     
     try:
-        finalcg = round(based/credit_sum,2)
+        finalcg = round(based/23,2)
     except ZeroDivisionError:
         finalcg = 0
     

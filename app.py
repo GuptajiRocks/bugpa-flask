@@ -13,7 +13,7 @@ def marks():
     selected_subjects = request.form.getlist('subjects') 
     subject_values = {}
     cgl = []
-    credit_sum = 0
+    # credit_sum = 0
     for subject in selected_subjects:
         if subject == "cpp":
             value = request.form.get(f"{subject}_value")
@@ -29,7 +29,7 @@ def marks():
                 cgl.append(6)
             else:
                 cgl.append(0)
-            credit_sum += 7
+            # credit_sum += 7
             subject_values["Data Structures using C++"] = value
         elif subject == "ims":
             value = request.form.get(f"{subject}_value")
@@ -45,7 +45,7 @@ def marks():
                 cgl.append(6)
             else:
                 cgl.append(0)
-            credit_sum += 4
+            # credit_sum += 4
             subject_values["Information Management Systems"] = value
         elif subject == "spec":
             value = request.form.get(f"{subject}_value")
@@ -61,7 +61,7 @@ def marks():
                 cgl.append(6)
             else:
                 cgl.append(0)
-            credit_sum += 4
+            # credit_sum += 4
             subject_values["Specialization"] = value
         elif subject == "prob":
             value = request.form.get(f"{subject}_value")
@@ -77,7 +77,7 @@ def marks():
                 cgl.append(6)
             else:
                 cgl.append(0)
-            credit_sum += 4
+            # credit_sum += 5
             subject_values["Probability and Statistics"] = value
         elif subject == "swe":
             value = request.form.get(f"{subject}_value")
@@ -93,7 +93,7 @@ def marks():
                 cgl.append(6)
             else:
                 cgl.append(0)
-            credit_sum += 4
+            # credit_sum += 4
             subject_values["Software Engineering"] = value
         else:
             pass
@@ -103,11 +103,13 @@ def marks():
     for i in range(len(cgl)):
         if i == 0:
             based = based + int(cgl[i])*7
+        elif i == 3:
+            based = based + int(cgl[i])*5
         else:
             based = based + int(cgl[i])*4
     
     try:
-        finalcg = round(based/23,2)
+        finalcg = round(based/24,2)
     except ZeroDivisionError:
         finalcg = 0
     
